@@ -2,7 +2,7 @@
 
 # Dev environment
 dnf install -y emacs git gitk screen autojump wget eclipse subversion mc
-dnf install -y htop stress procinfo tree
+dnf install -y htop stress procinfo tree lm_sensors
 dnf install -y macchanger nmap
 
 # Dev tools
@@ -14,7 +14,8 @@ dnf install -y lttng-tools
 dnf install -y discount # markdown
 
 # Other repos
-dnf install -y http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf install -y http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+    http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 
 # Window manager
@@ -27,6 +28,9 @@ dnf install -y NetworkManager-tui feh
 dnf install -y gnome-tweak-tool
 
 # Other
+dnf install -y gstreamer1-plugins-base gstreamer1-plugins-good gstreamer1-plugins-ugly \
+    gstreamer1-plugins-bad-free gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld \
+    gstreamer1-plugins-bad-free-extras gstreamer1-libav ffmpeg # Codecs
 dnf install -y solfege lynx liveusb-creator units unrar vlc
 dnf install -y gimp inkscape dia darktable fbida xournal
 dnf install -y aspell-en aspell-fr hunspell-fr verbiste
