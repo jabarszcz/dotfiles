@@ -10,7 +10,7 @@ dnf groupinstall "C Development Tools and Libraries"
 dnf install -y haskell-platform emacs-haskell-mode hlint
 #dnf install -y stack ... ?
 dnf install -y python-pip  sympy python-ipython scipy python3-scipy
-dnf install -y lttng-tools
+dnf install -y lttng-tools lttng-ust kernel-devel #TODO install lttng kernel modules ( see www.lttng.org/download/#fedora )
 dnf install -y discount # markdown
 
 # Other repos
