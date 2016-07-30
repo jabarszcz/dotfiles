@@ -1,0 +1,22 @@
+export PATH="$PATH:~/bin"
+export EDITOR="~/bin/emacs-nw"
+alias e=$EDITOR
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias s="git status"
+alias d="git diff"
+
+function l {
+    if [[ -z $1 ]]; then
+	ls
+    elif [[ -f $1 ]]; then
+	less $1
+    else
+	ls $1 -alh
+    fi
+}
+
+function cdm {
+    mkdir $1 && cd $1
+}

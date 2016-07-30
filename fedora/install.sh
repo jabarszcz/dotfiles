@@ -1,13 +1,20 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+pushd "${BASH_SOURCE%/*}" || {echo "could not locate script with BASH_SOURCE"; exit}
+../all/preinstall.sh
+popd
 
 # Dev environment
-dnf install -y emacs git gitk screen autojump wget eclipse subversion mc
+dnf install -y git gitk screen autojump wget eclipse subversion mc xclip
+dnf install -y emacs # icicles xcscope (manually on fedora)
 dnf install -y htop stress procinfo tree lm_sensors
 dnf install -y macchanger nmap
 
 # Dev tools
 dnf groupinstall "C Development Tools and Libraries"
 dnf install -y haskell-platform emacs-haskell-mode hlint
+cabal update
+cabal install hasktags ghc-mod hoogle primes
 #dnf install -y stack ... ?
 dnf install -y python-pip  sympy python-ipython scipy python3-scipy
 dnf install -y lttng-tools lttng-ust kernel-devel #TODO install lttng kernel modules ( see www.lttng.org/download/#fedora )
