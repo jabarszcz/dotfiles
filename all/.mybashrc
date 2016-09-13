@@ -1,11 +1,16 @@
 export PATH="$PATH:~/bin"
 export EDITOR="~/bin/emacs-nw"
 alias e=$EDITOR
+alias p=pass
+alias t=tree
+alias g=git
+alias s="git status"
+alias d="git diff"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
-alias s="git status"
-alias d="git diff"
+alias show="git show"
+alias co="git checkout"
 
 function l {
     if [[ -z $1 ]]; then

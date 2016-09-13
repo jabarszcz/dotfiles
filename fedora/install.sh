@@ -7,7 +7,7 @@ popd
 # Dev environment
 dnf install -y git gitk screen autojump wget eclipse subversion mc xclip
 dnf install -y emacs # icicles xcscope (manually on fedora)
-dnf install -y htop stress procinfo tree lm_sensors
+dnf install -y htop stress procinfo tree lm_sensors pass
 dnf install -y macchanger nmap
 
 # Dev tools
